@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    text-align: center;
+}
+.button div {
+    background: #f35fb5;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+    width: 125px;
+}
+.main img {
+    height: 325px;
+}
+.button {
+    text-align: -webkit-center;
+}
+html {
+    overflow: hidden;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="main">
+    <h1>Did you forgive me?</h1>
+    <div><img src="https://s3.amazonaws.com/colorslive/jpg_512x512/4826946-646ye3qlkavoyIAU.jpg"></div>
+    <div class="button">
+        <div id="no-btn">NO</div>
+        <div id="yes-btn">Yes</div>
+    </div>
+    </div>
+    <script>
+        $(document).mousemove(function(e){
+            var x = e.pageX - 300;
+            var y = e.pageY - 200;
+              $('#no-btn').css( "top", x);
+                $('#no-btn').css( "left",y);
+$("#no-btn").mouseenter(function(){
+    $(this).css({"position": "absolute" });
+});
+
+        });
+        $("#yes-btn").click(function(){
+            $("h1").html("Yeeeeaaaaahhh...Luv uh buddy");
+            $(".button").hide();
+        });
+    </script>
+</body>
+</html>
